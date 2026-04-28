@@ -21,12 +21,12 @@ export default function Home() {
     }
     const newList =
       activeFilter !== "All"
-        ? usersList.filter(
+        ? USERS.filter(
             (item) =>
               item.name.toLowerCase().includes(value) &&
               item.status == activeFilter.toLowerCase(),
           )
-        : usersList.filter((item) => item.name.toLowerCase().includes(value));
+        : USERS.filter((item) => item.name.toLowerCase().includes(value));
     setUsersList(newList);
   };
 
